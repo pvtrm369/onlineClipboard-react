@@ -30,9 +30,10 @@ const Output = () =>{
   return (
     <div >
        <div className=" d-flex">
-                <div className="form-outline w-25 mb-4">
-                <textarea className="form-control" placeholder='Enter the code' id="text" name="text" rows="1" onChange={onchange}  ></textarea>
+                <div className="form-outline   mb-4">
+                <input type="code" class="form-control" id="exampleFormControlInput1" onChange={onchange} placeholder="Enter the code"/>
                 </div>
+                
                 <div className="container">
 
                 <button class="btn btn-primary " type="submit" onClick={handleClick} >Get text</button>
@@ -43,6 +44,7 @@ const Output = () =>{
 
 
     </div>
+    
   )
 }
 

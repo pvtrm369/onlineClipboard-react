@@ -35,7 +35,7 @@ const Textarea = () => {
 
             <div className="mb-3 mt-4 ">
                 <label for="exampleFormControlTextarea1" className="form-label fw-bold">Send text to Clipboard</label>
-                <textarea className="form-control" id="text" name="text" rows="3" value={inText.text} onChange={onchange}></textarea>
+                <textarea className="form-control " id="text" name="text" rows="3" value={inText.text} onChange={onchange}></textarea>
             </div>
                 <div className=" mb-4 d-flex">
                 <button class="btn btn-primary " type="submit"  onClick={handleClick} >Sent text</button>

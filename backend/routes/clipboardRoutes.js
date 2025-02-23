@@ -16,7 +16,7 @@ router.post("/save", async(req , res)=>{
     try {
 
         const {text}=req.body;
-        if(!text) return res.status(400).json({message:"text is required"});
+        if(!text) return res.status(400).json({uniqueCode:"Text is Required"});
         
         const uniqueCode=  await generateUniqueCode();
         
@@ -38,9 +38,11 @@ router.post("/save", async(req , res)=>{
     router.get("/:uniqueCode", async ( req,res)=>{
         try {
             const {uniqueCode}= req.params;
+            if(uniqueCode==" ") return res.json({text:"Enter valid code"})
 
             const clipboard = await Clipboard.findOne({uniqueCode});
-            if(!uniqueCode) return res.status(404).json({message:"Not Found"});
+          
+            if(!uniqueCode) return res.status(404).json({text:"Not Found"});
 
             res.status(200).json({text:clipboard.text});
 

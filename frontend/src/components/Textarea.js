@@ -38,7 +38,7 @@ const Textarea = () => {
                 <textarea className="form-control " id="text" name="text" rows="3" value={inText.text} onChange={onchange}></textarea>
             </div>
                 <div className=" mb-4 d-flex">
-                <button class="btn btn-primary " type="submit"  onClick={handleClick} >Sent text</button>
+                <button class="btn btn-primary " type="submit"  onClick={handleClick} >Send text</button>
                     <p className="mx-2 my-2"> {inData.uniqueCode}</p>
                 </div>
                
